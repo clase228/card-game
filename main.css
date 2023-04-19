@@ -1,0 +1,62 @@
+@font-face {
+   font-family: StratosSkyeng;
+   src: url(font/stratosskyengweb-regular.woff2);
+ }
+*{
+   padding: 0;margin: 0;font-family: 'StratosSkyeng';
+}
+.wrapper{
+   background-color: #004980;
+   height: 100vh;
+   display: flex;
+   justify-content: center;align-items: center;
+}
+.difficulty{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   width: 480px;
+   height: 459px;
+   background: #C2F5FF;
+   border-radius: 12px;
+}
+.difficulty_title{
+   text-align: center;
+   font-size: 40px;
+   line-height: 48px;
+   color: #004980;  
+}
+.difficulty_level{
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   
+   
+   
+}
+.difficulty_level_num{
+   border-radius: 12px;
+   width: 98px;
+   height: 97px;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 64px;
+   color: #0080C1;
+
+
+}
+.difficulty_start{
+   width: 246px;
+   height: 50px;
+   background: #7AC100;
+   border-radius: 12px;
+   font-size: 24px;
+line-height: 32px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #fff;
+}
