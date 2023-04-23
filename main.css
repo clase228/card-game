@@ -11,7 +11,7 @@
    display: flex;
    justify-content: center;align-items: center;
 }
-.difficulty{
+.card{
    display: flex;
    flex-direction: column;
    justify-content: space-around;
@@ -45,6 +45,7 @@
    justify-content: center;
    font-size: 64px;
    color: #0080C1;
+   cursor: pointer;
 
 
 }
@@ -54,9 +55,14 @@
    background: #7AC100;
    border-radius: 12px;
    font-size: 24px;
-line-height: 32px;
-display: flex;
-justify-content: center;
-align-items: center;
-color: #fff;
+   line-height: 32px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   cursor: pointer;
+}
+.difficulty_level_num.active{
+   background-color: #004980;
+   color:#fff;
 }
