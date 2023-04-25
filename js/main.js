@@ -1,10 +1,10 @@
 let wrapper = document.querySelector('.wrapper')
-let lvlBtns = document.querySelectorAll('.difficulty_level_num')
-let startBtn = document.querySelector('.difficulty_start')
+let lvlBtns = document.querySelectorAll('.difficulty-level-num')
+let startBtn = document.querySelector('.difficulty-start')
 let difficulty
 
 startBtn.addEventListener('click', function () {
-   let activeLvl = document.querySelector('.difficulty_level_num.active')
+   let activeLvl = document.querySelector('.difficulty-level-num.active')
    if (activeLvl) {
       difficulty = activeLvl.dataset.lvl
       request({
