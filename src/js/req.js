@@ -3,9 +3,9 @@ const NO_PARAMS = {}
 const NO_HEADERS = {}
 const OK_200 = [200]
 
-function request({
+export function request({
    method = 'GET',
-   url,
+   url = '../pages/test.html',
    params = NO_PARAMS,
    requestType = 'json',
    responseType = 'json',

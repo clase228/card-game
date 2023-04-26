@@ -119,9 +119,87 @@
    grid-template-columns: repeat(9, 1fr);
 }
 
-.card-icon {
+.card-wrapper {
+   margin-bottom: 15px;
+   position: relative;
+}
+
+.card-back {
    display: flex;
    justify-content: center;
    align-items: center;
-   margin-bottom: 15px;
+}
+
+.card-front {
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%, 0);
+   display: flex;
+   justify-content: center;
+}
+
+.front {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 95px;
+   height: 133px;
+   background-color: #fff;
+   border-radius: 5px;
+}
+
+.front-center {
+   margin: 0 auto;
+   text-align: center;
+}
+
+.front-top {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding-left: 6px;
+   padding-top: 6px;
+   margin-right: auto;
+}
+
+.front-bot {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: right;
+   margin-left: auto;
+   padding-right: 6px;
+   padding-bottom: 6px;
+}
+
+.front-bot-suit {
+   position: relative;
+   transform: rotate(180deg);
+   margin-bottom: -11px;
+}
+
+.front-bot-suit img {
+   width: 6px;
+}
+
+.front-top-suit {
+   margin-top: -11px;
+}
+
+.front-top-suit img {
+   width: 6px;
+}
+
+.front-bot-runk {
+   font-size: 24px;
+   line-height: 32px;
+}
+
+.front-top-runk {
+   font-size: 24px;
+   line-height: 32px;
 }
