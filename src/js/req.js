@@ -14,7 +14,7 @@ export function request({
    checkStatus = false,
    onSuccess = noop,
    onError = noop,
-   ok_responses = OK_200,
+   okResponses = OK_200,
 }) {
    const req = new XMLHttpRequest()
    const urlParams = new URLSearchParams(params)
@@ -30,7 +30,7 @@ export function request({
          onError(target.response)
          return
       }
-      if (!ok_responses.includes(target.status)) {
+      if (!okResponses.includes(target.status)) {
          onError(target.response)
          return
       }
@@ -43,8 +43,8 @@ export function request({
    let dataBody = body
    if (requestType === 'urlencoded') {
       req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded')
-      const body_params = new URLSearchParams(body)
-      dataBody = body_params.toString()
+      const bodyParams = new URLSearchParams(body)
+      dataBody = bodyParams.toString()
    }
    if (requestType === 'json') {
       req.setRequestHeader('Content-type', 'application/json')
