@@ -1,12 +1,12 @@
 @font-face {
    font-family: StratosSkyeng;
-   src: url(../font/stratosskyengweb-regular.woff2);
+   src: url('../font/stratosskyengweb-regular.woff2');
 }
 
 * {
    padding: 0;
    margin: 0;
-   font-family: StratosSkyeng;
+   font-family: StratosSkyeng, sans-serif;
 }
 
 .wrapper {

@@ -1,6 +1,6 @@
 import './css/main.css'
 import { request } from './js/req'
-import cardBack from './images/back-card.png'
+import cardBack from '/static/images/back-card.png'
 
 const wrapper = document.querySelector('.wrapper')
 const lvlBtns = document.querySelectorAll('.difficulty-level-num')
