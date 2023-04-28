@@ -15,6 +15,18 @@ export function request({
    onSuccess = noop,
    onError = noop,
    okResponses = OK_200,
+}: {
+   method?: string
+   url?: string
+   params?: Record<string, any>
+   requestType?: string
+   responseType?: XMLHttpRequestResponseType
+   headers?: Record<string, string>
+   body?: any
+   checkStatus?: boolean
+   onSuccess?: (response: any) => void
+   onError?: (error: any) => void
+   okResponses?: number[]
 }) {
    const req = new XMLHttpRequest()
    const urlParams = new URLSearchParams(params)
@@ -26,19 +38,19 @@ export function request({
    req.responseType = responseType
    req.onload = (e) => {
       const target = e.target
-      if (checkStatus && target.response.status != 'ok') {
-         onError(target.response)
+      if (checkStatus && req.response.status != 'ok') {
+         onError(req.response)
          return
       }
-      if (!okResponses.includes(target.status)) {
-         onError(target.response)
+      if (!okResponses.includes(req.status)) {
+         onError(req.response)
          return
       }
 
-      onSuccess(target.response)
+      onSuccess(req.response)
    }
    req.onerror = () => {
-      onError()
+      onError(req.response)
    }
    let dataBody = body
    if (requestType === 'urlencoded') {
