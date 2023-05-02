@@ -1,4 +1,4 @@
-import './css/main.css'
+import './scss/main.scss'
 import { request } from './js/req'
 import cardBack from './images/back-card.png'
 import win from './images/win.png'

@@ -19,7 +19,9 @@
    "license": "ISC",
    "dependencies": {
       "http-server": "^14.1.1",
-      "lodash": "^4.17.21"
+      "lodash": "^4.17.21",
+      "sass": "^1.62.1",
+      "sass-loader": "^13.2.2"
    },
    "devDependencies": {
       "ajv": "^7.2.4",
