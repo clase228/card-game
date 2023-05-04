@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 const noop = () => {}
 const NO_PARAMS = {}
 const NO_HEADERS = {}
@@ -36,8 +38,7 @@ export function request({
       req.setRequestHeader(el, headers[el])
    })
    req.responseType = responseType
-   req.onload = (e) => {
-      const target = e.target
+   req.onload = () => {
       if (checkStatus && req.response.status != 'ok') {
          onError(req.response)
          return
