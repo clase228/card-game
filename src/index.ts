@@ -9,19 +9,12 @@ const modal = document.querySelector('.modal') as HTMLElement
 
 const suits = ['heart', 'spades', 'diamond', 'clubs']
 const runks = ['6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
-
 let difficulty = 0
 let timerMin = 0
 let timerSec = 0
 let timer = setInterval(() => {
    console.log(123)
 }, 1000)
-
-let difficulty: number = 0
-let timerMin = 0
-let timerSec = 0
-let timer = setInterval(() => {}, 1000)
-
 
 let countOpenCard = 0
 document.addEventListener('click', (e: MouseEvent) => {
@@ -56,11 +49,9 @@ document.addEventListener('click', (e: MouseEvent) => {
             modal.style.display = 'none'
          },
       })
-
       timerMin = 0
       timerSec = 0
       clearInterval(timer)
-
    }
    if (target.classList.contains('difficulty-level-num')) {
       const lvlBtns = document.querySelectorAll('.difficulty-level-num')
@@ -81,17 +72,10 @@ document.addEventListener('click', (e: MouseEvent) => {
             responseType: '',
             onSuccess: (data: string) => {
                wrapper.innerHTML = data
-
                const timerMinElement = document.querySelector(
                   '.timerMin'
                ) as HTMLElement
                const timerSecElement = document.querySelector(
-
-               let timerMinElement = document.querySelector(
-                  '.timerMin'
-               ) as HTMLElement
-               let timerSecElement = document.querySelector(
-
                   '.timerSec'
                ) as HTMLElement
 
@@ -164,11 +148,7 @@ document.addEventListener('click', (e: MouseEvent) => {
                      const cardWrappers =
                         document.querySelectorAll('.card-wrapper')
                      for (let i = 0; i < cardWrappers.length; i++) {
-
                         const html = `<div class="front" >
-
-                        let html = `<div class="front" >
-
                         <div class="front-top">
                            <div class="front-top-runk">${
                               (cardWrappers[i] as HTMLElement).dataset.runk
@@ -189,20 +169,12 @@ document.addEventListener('click', (e: MouseEvent) => {
                            }</div>
                         </div>
                      </div>`
-
                         const div = document.createElement('div')
                         div.classList.add('card-front')
                         ;(cardWrappers[i] as HTMLElement).appendChild(div)
                         div.innerHTML = html
                         const cardFront =
                            document.querySelectorAll('.card-front')
-
-                        let div = document.createElement('div')
-                        div.classList.add('card-front')
-                        ;(cardWrappers[i] as HTMLElement).appendChild(div)
-                        div.innerHTML = html
-                        let cardFront = document.querySelectorAll('.card-front')
-
                         setTimeout(() => {
                            for (let i = 0; i < cardFront.length; i++) {
                               ;(cardFront[i] as HTMLElement).style.display =
@@ -223,11 +195,7 @@ document.addEventListener('click', (e: MouseEvent) => {
 
 function checkOpenCard() {
    if (countOpenCard === 2) {
-
       const openCard = document.querySelectorAll(
-
-      let openCard = document.querySelectorAll(
-
          '.card-wrapper[data-is-open="yes"]'
       )
       if (
@@ -256,10 +224,6 @@ function openModalResult(result: string) {
    const modalResult = document.querySelector('.modal-result') as HTMLElement
    const modalTimeMin = document.querySelector('.modal-time-min') as HTMLElement
    const modalTimesec = document.querySelector('.modal-time-sec') as HTMLElement
-
-
-   const modalTime = document.querySelector('.modal-time')
-
    modal.style.display = 'block'
 
    if (result === 'win') {
@@ -276,8 +240,5 @@ function openModalResult(result: string) {
    timerMin = 0
    timerSec = 0
    clearInterval(timer)
-
    console.log(1)
-
-
 }

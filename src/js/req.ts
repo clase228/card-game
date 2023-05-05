@@ -40,10 +40,6 @@ export function request({
    })
    req.responseType = responseType
    req.onload = () => {
-
-   req.onload = (e) => {
-      const target = e.target
-
       if (checkStatus && req.response.status != 'ok') {
          onError(req.response)
          return
@@ -55,6 +51,7 @@ export function request({
 
       onSuccess(req.response)
    }
+
    req.onerror = () => {
       onError(req.response)
    }

@@ -1,9 +1,2 @@
-
-extends: ['stylelint-config-standard', 'stylelint-config-prettier']
 customSyntax: 'postcss-scss'
-extends:
-   [
-      'stylelint-config-standard',
-      'stylelint-config-prettier',
-      'stylelint-prettier/recommended',
-   ]
+extends: ['stylelint-config-standard', 'stylelint-config-prettier']
