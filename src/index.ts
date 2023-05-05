@@ -148,7 +148,7 @@ document.addEventListener('click', (e: MouseEvent) => {
                      const cardWrappers =
                         document.querySelectorAll('.card-wrapper')
                      for (let i = 0; i < cardWrappers.length; i++) {
-                        let html = `<div class="front" >
+                        const html = `<div class="front" >
                         <div class="front-top">
                            <div class="front-top-runk">${
                               (cardWrappers[i] as HTMLElement).dataset.runk

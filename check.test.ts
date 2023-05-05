@@ -3,10 +3,7 @@ test('приложение запущено и есть контейнер wrapp
    // загружаем index.html в jsdom
    const fs = require('fs')
    const path = require('path')
-   const html = fs.readFileSync(
-      path.resolve(__dirname, '../index.html'),
-      'utf8'
-   )
+   const html = fs.readFileSync(path.resolve(__dirname, './index.html'), 'utf8')
    document.documentElement.innerHTML = html
    console.log(html)
    // проверяем наличие контейнера wrapper
