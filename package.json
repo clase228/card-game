@@ -7,9 +7,14 @@
       "test": "jest",
       "format": "prettier --write ./src/",
       "lint:js": "eslint ./src/**/*.js",
+
       "lint:css": "stylelint ./src/**/*.scss",
       "lint:ts": "eslint . --ext .ts",
       "lint": "npm run lint:ts && npm run lint:css",
+
+      "lint:css": "stylelint ./src/**/*.css",
+      "lint:ts": "tsc ––noEmit",
+
       "lint:css": "stylelint ./src/**/*.css --fix",
       "lint": "npm run lint:js && npm run lint:css",
       "prepare": "husky install",
